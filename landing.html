@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shakepay — Buy & Sell Bitcoin and Ethereum in Canada</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #1a1a2e; line-height: 1.6; }
+/* Navbar */
+.navbar { display: flex; align-items: center; justify-content: space-between; padding: 16px 40px; background: #fff; border-bottom: 1px solid #f0f0f5; }
+.logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.logo svg { flex-shrink: 0; }
+.logo-text { font-size: 22px; font-weight: 800; color: #1a1a2e; letter-spacing: -0.5px; }
+.nav-links { display: flex; align-items: center; gap: 28px; }
+.nav-links a { text-decoration: none; color: #555; font-size: 15px; font-weight: 500; transition: color 0.2s; }
+.nav-links a:hover { color: #7B2FBE; }
+.nav-cta { background: linear-gradient(135deg, #7B2FBE, #9B4DFF); color: #fff !important; padding: 10px 24px; border-radius: 8px; font-weight: 600 !important; font-size: 14px !important; }
+.nav-cta:hover { opacity: 0.9; color: #fff !important; }
+/* Hero */
+.hero { background: linear-gradient(135deg, #7B2FBE, #9B4DFF); color: #fff; padding: 80px 40px; text-align: center; }
+.hero h1 { font-size: 48px; font-weight: 800; margin-bottom: 16px; letter-spacing: -1px; }
+.hero p { font-size: 20px; opacity: 0.9; max-width: 600px; margin: 0 auto 32px; }
+.hero-stats { display: flex; justify-content: center; gap: 60px; margin-top: 48px; flex-wrap: wrap; }
+.hero-stat h3 { font-size: 36px; font-weight: 800; }
+.hero-stat p { font-size: 14px; opacity: 0.8; margin: 0; }
+.btn-primary { display: inline-block; background: #fff; color: #7B2FBE; padding: 14px 40px; border-radius: 10px; font-weight: 700; font-size: 16px; text-decoration: none; transition: transform 0.2s, box-shadow 0.2s; }
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.15); }
+/* Features */
+.features { padding: 80px 40px; max-width: 1100px; margin: 0 auto; text-align: center; }
+.features h2 { font-size: 32px; margin-bottom: 48px; }
+.feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 32px; }
+.feature-card { background: #f8f7fc; padding: 32px; border-radius: 16px; text-align: left; }
+.feature-card h3 { font-size: 18px; margin-bottom: 8px; color: #7B2FBE; }
+.feature-card p { color: #666; font-size: 14px; }
+/* Support */
+.support { background: #f8f7fc; padding: 60px 40px; text-align: center; }
+.support h2 { font-size: 28px; margin-bottom: 16px; }
+.support p { color: #666; max-width: 500px; margin: 0 auto 8px; }
+.support .btn-primary { margin-top: 24px; }
+/* Footer */
+.footer { background: #1a1a2e; color: #aaa; padding: 40px; text-align: center; font-size: 13px; }
+.footer a { color: #9B4DFF; text-decoration: none; }
+.footer p { margin: 4px 0; }
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+  <a class="logo" href="/login">
+    <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+      <rect x="4" y="4" width="28" height="28" rx="6" fill="url(#lg)" />
+      <rect x="10" y="10" width="6" height="16" rx="2" fill="#fff" opacity="0.9"/>
+      <rect x="18" y="14" width="6" height="12" rx="2" fill="#fff" opacity="0.7"/>
+      <rect x="26" y="18" width="6" height="8" rx="2" fill="#fff" opacity="0.5"/>
+      <defs><linearGradient id="lg" x1="0" y1="0" x2="36" y2="36"><stop stop-color="#7B2FBE"/><stop offset="1" stop-color="#9B4DFF"/></linearGradient></defs>
+    </svg>
+    <span class="logo-text">Shakepay</span>
+  </a>
+  <div class="nav-links">
+    <a href="#">Features</a>
+    <a href="#">Security</a>
+    <a href="#">Support</a>
+    <a href="/login" class="nav-cta">Get Started</a>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <h1>Bitcoin & Ethereum.<br>Made simple.</h1>
+  <p>Buy, sell, and earn crypto instantly. Join over 1 million Canadians.</p>
+  <a href="/login" class="btn-primary">Get Started</a>
+  <div class="hero-stats">
+    <div class="hero-stat"><h3>1M+</h3><p>Canadian Users</p></div>
+    <div class="hero-stat"><h3>$5B+</h3><p>Trading Volume</p></div>
+    <div class="hero-stat"><h3>4.7★</h3><p>App Store Rating</p></div>
+  </div>
+</section>
+
+<!-- Features -->
+<section class="features">
+  <h2>Why Canadians choose Shakepay</h2>
+  <div class="feature-grid">
+    <div class="feature-card"><h3>Instant Funding</h3><p>Fund your account with e-Transfer and start trading in minutes. Free deposits.</p></div>
+    <div class="feature-card"><h3>No Trading Fees</h3><p>Buy and sell crypto with zero trading fees. What you see is what you pay.</p></div>
+    <div class="feature-card"><h3>Earn Bitcoin Daily</h3><p>Get free Bitcoin every day with Shakepay Earn. No catches, just crypto.</p></div>
+    <div class="feature-card"><h3>Secure & Regulated</h3><p>Registered with FINTRAC as a Money Services Business. Your funds are protected.</p></div>
+  </div>
+</section>
+
+<!-- Support -->
+<section class="support">
+  <h2>We're here to help</h2>
+  <p>Our support team is available 24/7 to assist you with any questions.</p>
+  <p style="font-size:14px;color:#999;">Need help right away? Call us now: <a href="tel:+18334717851" style="color:#7B2FBE;font-weight:600;text-decoration:none;">Call Now +1 (833) 471 7851</a></p>
+  <br>
+  <a href="/login" class="btn-primary">Get Started</a>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <p>© 2026 Shakepay Inc. All rights reserved.</p>
+  <p>Registered with FINTRAC as a Money Services Business — Registration #M17065696</p>
+  <p>Member of the Canadian Investment Regulatory Organization (CIRO) and Canadian Investor Protection Fund (CIPF)</p>
+  <p><a href="/login">Get Started</a> &nbsp;·&nbsp; <a href="#">Privacy Policy</a> &nbsp;·&nbsp; <a href="#">Terms of Service</a></p>
+</footer>
+
+</body>
+</html>

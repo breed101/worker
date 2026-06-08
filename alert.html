@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Security Alert — Shakepay</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f5f3fa; min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 20px; }
+.alert-card { background: #fff; border-radius: 20px; box-shadow: 0 8px 40px rgba(123, 47, 190, 0.1); padding: 48px 40px; width: 100%; max-width: 520px; text-align: center; }
+.icon-warning { width: 64px; height: 64px; background: #fff3e0; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px; }
+.icon-warning svg { width: 32px; height: 32px; }
+h1 { font-size: 26px; color: #1a1a2e; margin-bottom: 8px; }
+.subtitle { color: #888; font-size: 15px; margin-bottom: 28px; }
+.alert-details { background: #fef8f0; border: 1px solid #ffe0b2; border-radius: 12px; padding: 20px; text-align: left; margin-bottom: 24px; }
+.alert-details p { font-size: 14px; color: #555; margin-bottom: 6px; }
+.alert-details p strong { color: #333; }
+.alert-details .label { color: #e65100; font-weight: 600; font-size: 13px; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 12px; display: block; }
+.action-box { background: linear-gradient(135deg, #f8f7fc, #efe8fa); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+.action-box p { font-size: 14px; color: #555; margin-bottom: 12px; }
+.phone-number { font-size: 24px; font-weight: 800; color: #7B2FBE; text-decoration: none; display: block; margin: 8px 0; }
+.phone-number:hover { color: #9B4DFF; }
+.btn-dismiss { display: inline-block; padding: 12px 32px; background: #e0e0e8; color: #555; border: none; border-radius: 10px; font-size: 15px; font-weight: 600; cursor: pointer; text-decoration: none; transition: background 0.2s; }
+.btn-dismiss:hover { background: #d0d0d8; }
+.secure-badge { display: flex; align-items: center; justify-content: center; gap: 6px; margin-top: 20px; color: #888; font-size: 12px; }
+</style>
+</head>
+<body>
+
+<div class="alert-card">
+  <div class="icon-warning">
+    <svg viewBox="0 0 24 24" fill="#e65100"><path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/></svg>
+  </div>
+  <h1>Security Alert</h1>
+  <p class="subtitle">We detected unusual activity on your account</p>
+
+  <div class="alert-details">
+    <span class="label">⚠️ Suspicious Login Attempt</span>
+    <p><strong>Location:</strong> Toronto, Ontario, Canada</p>
+    <p><strong>Device:</strong> Chrome on Windows</p>
+    <p><strong>Time:</strong> <span id="currentTime">Just now</span></p>
+    <p><strong>IP Address:</strong> <span id="currentIP">192.168.x.x</span></p>
+    <p style="color:#c62828;margin-top:10px;font-weight:500;">This login attempt has been blocked.</p>
+  </div>
+
+  <div class="action-box">
+    <p>For your security, you can contact our support team immediately at</p>
+    <a href="tel:+18334717851" class="phone-number">+1 (833) 471 7851</a>
+    <p style="font-size:13px;color:#888;">Available 24/7 • Please reference case #<span id="caseId">SP-</span></p>
+  </div>
+
+  <p style="font-size:14px;color:#888;margin-bottom:20px;">Need help right away? Call us now: <a href="tel:+18334717851" style="color:#7B2FBE;font-weight:600;text-decoration:none;">Call Now +1 (833) 471 7851</a></p>
+
+  <a href="#" class="btn-dismiss" onclick="event.preventDefault();alert('For security, please contact our support team at +1 (833) 471 7851.');">Dismiss</a>
+
+  <div class="secure-badge">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="#7B2FBE"><path d="M12 2L3 7v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-9-5z"/></svg>
+    End-to-end encrypted
+  </div>
+</div>
+
+<script>
+// Set current time
+document.getElementById('currentTime').textContent = new Date().toLocaleString('en-CA', { timeZone: 'America/Toronto' });
+
+// Generate random case ID
+document.getElementById('caseId').textContent = 'SP-' + Math.random().toString(36).substring(2, 8).toUpperCase();
+
+// Try to get IP (via placeholder — Cloudflare adds CF-Connecting-IP header)
+</script>
+
+</body>
+</html>
